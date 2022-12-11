@@ -1,0 +1,26 @@
+.topCard_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  img {
+    height: 60px;
+  }
+}
+.productToDisplay {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  .card {
+    width: 300px;
+    max-height: 325px;
+    height: 100vh;
+    padding: 15px;
+  }
+  img {
+    width: 100px;
+    height: 100px;
+  }
+}

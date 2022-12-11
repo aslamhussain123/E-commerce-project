@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="cart-top mt-5">
+        <div class="topCard_wrapper">
+            <div class="card" *ngFor="let item of topCartProduct">
+                <img src="{{item.img}}">
+                <div class="desc">
+                  <h5>{{item.title}}</h5>
+                   <p>{{item.details}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="productToDisplay mt-5">
+       <div class="card" *ngFor="let item of displayProducts">
+           <h6>{{item.title}}</h6>
+           <p>{{item.price}}</p>
+           <p>{{item.category}}</p>
+           <div>
+               <img src="{{item.image}}">
+           </div>
+           <button class="btn btn-primary">Add to Cart</button>
+       </div>
+    </div>
+</div>
