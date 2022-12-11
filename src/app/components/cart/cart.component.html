@@ -1,1 +1,49 @@
-<p>cart works!</p>
+<ng-container *ngIf="products.length == 0">
+    <div class="container">
+        <div class="notDataWrapper">
+            <div class="noData">
+                <img src="assets/images/noDataimg.jpg" style="width: 150px;">
+                <h4>Your cart is empty</h4>
+                <p>Add item to it now</p>
+                <button class="btn btn-primary">Show now</button>
+            </div>
+        </div>
+    </div>
+</ng-container>
+<ng-container *ngIf="products.length !=0">
+ <div class="container">
+    <div class="card-table table-responsive">
+        <table class="table table-bordred">
+          <thead>
+            <tr>
+                <th>id</th>
+                <th>Name</th>
+                <th>image</th>
+                <th>Desc</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Qnty</th>
+                <th>Total</th>
+                <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of products, let i=index">
+                <td>{{i+1}}</td>
+                <td>{{item.title}}</td>
+                <td><img src="{{item.image}}" style="width: 100px;"></td>
+                <td>{{item.description}}</td>
+                <td>{{item.category}}</td>
+                <td>{{item.price}}</td>
+                <td>{{item.quantity}}</td>
+                <td>{{item.total}}</td>
+                <td>
+                    <button (click)="removeProduct(item)" class="btn btn-danger">Remove Item</button>
+                </td>
+            </tr>
+          </tbody>
+        </table>
+     </div>`
+ </div>
+</ng-container>
+
